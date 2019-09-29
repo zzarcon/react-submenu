@@ -2,7 +2,7 @@ import * as React from 'react';
 import {Component} from 'react';
 import {GHCorner} from 'react-gh-corner';
 import {Submenu} from '../src';
-import {AppWrapper, GlobalStyles} from './styled';
+import {AppWrapper, ContentItem, ContentWrapper, GlobalStyles} from './styled';
 
 export interface AppState {
   
@@ -15,11 +15,26 @@ export default class App extends Component <{}, AppState> {
     
   }
 
+  onContentClick = () => {
+
+  }
+
   renderContent = () => {
     return (
-      <div>
-        Content
-      </div>
+      <ContentWrapper>
+        <ContentItem>
+          Back
+        </ContentItem>
+        <ContentItem>
+          Forward
+        </ContentItem>
+        <ContentItem>
+          Reload
+        </ContentItem>
+        <ContentItem onClick={this.onContentClick}>
+          Custom item
+        </ContentItem>
+      </ContentWrapper>
     )
   }
 

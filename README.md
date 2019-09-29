@@ -1,5 +1,5 @@
 # react-submenu
-> right click context menu as simple as it gets 
+> Unopinionated right click context menu so simple it hurts 👺
 
 ### Installation
 
